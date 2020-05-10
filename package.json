@@ -6,6 +6,12 @@
   "styleSheets": [
     "iceberg.less"
   ],
+  "author": "guri3<@aloesquash.lock@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guri3/inkdrop-iceberg-syntax-theme"
+  },
+  "license": "MIT",
   "engines": {
     "inkdrop": "^4.x"
   }
