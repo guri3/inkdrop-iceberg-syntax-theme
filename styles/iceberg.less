@@ -1,165 +1,174 @@
+// TODO: Fix magic number
+
 @import "./colors";
 
 .editor {
 
   .CodeMirror {
     // Background color of main window
-    background-color: #FFFFFF;
-    color: @base02;
-  }
-  .CodeMirror-scroll {
-    // Color of otherwise un-styled text
-    color: @base02;
+    background-color: #161821;
+    color: #c6c8d1;
   }
   .CodeMirror-gutters {
     // Gutter to the left
-    background-color: #FFFFFF;
+    background-color: #1e2132;
+    border-right: 1px solid #1e2132;
   }
   .CodeMirror-linenumber {
     // Line numbers in the gutter
-    color: @base03;
-    opacity: 0.6;
+    color: #444b71;
   }
   .CodeMirror-selected {
     // Highlighed text
-    background-color: @base05;
+    background-color: #84a0c640;
   }
   .CodeMirror-focused .CodeMirror-selected {
     // Highlighed text
-    background-color: @base04;
+    background-color: #84a0c680;
   }
   .CodeMirror-cursor {
     // The cursor
-    border-left: 1px solid @base00;
+    border-left: 1px solid #c6c8d1;
   }
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
     // When you click a tag/bracket and the matching one is highlighted
-    background: @base03 !important;
-    border-bottom: 1px solid @base08 !important;
+    background: #6b7089 !important;
+    border-bottom: 1px solid #c6c8d1 !important;
   }
   .CodeMirror-foldgutter-open:after {
     // Those little arrows in the gutter
-    color: @base03;
+    color: #6b7089;
   }
   .CodeMirror-foldgutter-folded:after {
     // The arrows after you collapse code
-    color: @base03;
+    color: #6b7089;
   }
   .CodeMirror.over-gutter,
   .CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
       // Arrows when hovering on the gutter
-      color: @base03;
+      color: #6b7089;
     }
   }
   .CodeMirror-foldmarker {
     // The [...] marking collapsed code
-    border-color: @base03;
-    background-color: @base03;
-    color: @base02;
+    border-color: #6b7089;
+    background-color: #6b7089;
+    color: #444b71;
   }
   .CodeMirror .CodeMirror-linewidget img.inline-widget {
     background: rgba(0,0,0,0.05);
   }
-  .CodeMirror-searching {
+  .cm-searching {
     // Ctrl + F results
-    background-color: @base0D;
-    // Selected result
-    &.searching-current-match {
-      background-color: @base0C;
-    }
+    outline: 1px solid #e2a478a0;
+    background-color: #e2a478a0;
   }
 
   /* All 'dem swatches */
 
   .CodeMirror {
-    .cm-atom,
+    .cm-atom {
+      color: @base-cyan;
+    }
     .cm-formatting-list.cm-variable-3 {
-      color: @base0C;
+      color: @base-purple;
     }
-
-    .cm-keyword,
+    .cm-keyword {
+      color: @base-blue;
+    }
     .cm-formatting-list.cm-variable-2 {
-      color: @base0A;
+      color: @base-blue;
     }
-
-    .cm-url,
+    .cm-url {
+      color: @base-blue !important;
+    }
+    // TODO: string-2
     .cm-string,
-    .cm-string-2,
+    .cm-string-2 {
+      color: @base-cyan;
+    }
+    // TODO hr
     .cm-hr {
-      color: @base09;
+      color: @base-green;
     }
     .cm-number,
     .cm-attribute,
     .cm-plus {
-      color: @base0A;
+      // TODO: plus
+      color: @base-purple;
     }
     .cm-def,
-    .cm-property {
-      color: @base0C;
-    }
+    .cm-property,
     .cm-variable {
-      color: @base0A;
+      color: #c6c8d1;
     }
+    // TODO: bracket
     .cm-operator,
-    .cm-meta,
     .cm-bracket {
-      color: @base0E;
+      color: @base-blue;
+    }
+    .cm-meta {
+      color: @base-green;
     }
     .cm-comment {
-      color: @base04;
+      color: #6b7089;
       font-style: italic;
     }
+    // TODO: error, minus
     .cm-error,
     .cm-minus {
-      color: @base0B;
+      color: @base-red;
     }
     .cm-formatting-header {
       opacity: 0.3;
     }
     .cm-header {
-      color: @base0A;
+      color: @base-orange;
     }
     .cm-link {
-      color: @base0E;
+      color: @base-cyan;
       text-underline-position: under;
     }
+    // TODO: rangeinfo
     .cm-rangeinfo {
-      color: @base0C;
+      color: @base-orange;
     }
+    // TODO: qualifier, builtin
     .cm-qualifier,
     .cm-builtin,
     .cm-tag {
-      color: @base08;
+      color: @base-blue;
     }
     .cm-quote {
-      color: @base0F;
+      color: @base-purple;
       font-style: italic;
     }
     .cm-whitespace::before {
-      color: @base04;
+      color: #444b71;
       opacity: 0.4;
     }
     .cm-formatting-quote, .cm-formatting-strong, .cm-formatting-em {
       opacity: 0.6;
     }
     .cm-strong {
-      color: @base0B;
+      color: @base-green;
     }
+    // TODO: em
     .cm-em {
-      color: @base0C;
+      color: @base-bright-cyan;
     }
 
     // carriage return
     .CodeMirror-code > div > pre > span::after, .CodeMirror-line > span::after {
-      color: @base00;
+      color: #444b71;
       opacity: 0.4;
     }
 
     .cm-inline-code {
       background: rgba(0, 0, 0, 0.02);
-      color: @base03;
+      color: @base-purple;
     }
 
     .gfm-codeblock-bg.CodeMirror-linebackground {
@@ -167,12 +176,12 @@
     }
 
     .cm-table-sep, .table-row.table-row-1 {
-      color: @base0E;
+      color: @base-green;
     }
   }
 
   /* Active Line Highlight support */
   .CodeMirror-activeline-background, .CodeMirror-activeline-gutter {
-    background-color: fade(@base06, 70%) !important;
+    background-color: fade(#1e2132, 70%) !important;
   }
 }

@@ -1,9 +1,11 @@
 {
   "version": "1.0.0",
-  "name": "default-light-syntax",
-  "description": "Default light syntax theme",
+  "name": "iceberg-syntax",
+  "description": "Iceberg syntax theme",
   "theme": "syntax",
-  "styleSheets": ["default.less"],
+  "styleSheets": [
+    "iceberg.less"
+  ],
   "engines": {
     "inkdrop": "^4.x"
   }
